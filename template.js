@@ -9,7 +9,7 @@ const enemyTypes  =[
   {
     type : 'enemy1',
     image : null,
-    src : "./enemy1.png",
+    src : "./image/enemy1.png",
     posx : 0,
     posy : 600,
     r : 10,
@@ -20,7 +20,7 @@ const enemyTypes  =[
   { 
     type : 'enemy2',
     image : null, 
-    src :"./mii.jpg",
+    src :"./image/mii.jpg",
     posx : 1.22,
     posy : 400,
     r : 10,
@@ -31,7 +31,7 @@ const enemyTypes  =[
   {
     type : 'enemy3',
     image : null,
-    src : "./enemy3.png",
+    src : "./image/enemy3.png",
     posx : 1.08,
     posy : 600,
     r : 20,
@@ -42,7 +42,7 @@ const enemyTypes  =[
   {
     type : 'friend1',
     image : null,
-    src : "./friend1.png",
+    src : "./image/friend1.png",
     posx : 1.7,
     posy : 600, 
     r : 20,
@@ -77,7 +77,7 @@ function init(){
   // プレイヤーの初期値を設定
   player = new Sprite();
   player.image = new Image();
-  player.image.src = "./player.png";
+  player.image.src = "./image/player.png";
   player.posx = 400;
   player.posy = 600;
   player.r = 10;
@@ -112,9 +112,9 @@ function keypress(e){
         if(distance3  > r3 && distance3 <= action_r ){
           e.posy = 150;
           e.speed = 20;
-          player.image.src = 'player_tornade.png';
+          player.image.src = './image/player_tornade.png';
           setTimeout(()=>{
-            player.image.src = "./player.png";
+            player.image.src = "./image/player.png";
           },"500");
           
         }
@@ -325,7 +325,7 @@ function draw(){
 
     // リスタートボタン表示
     const restart_button = document.createElement("img");
-    restart_button.src = './restart.png';
+    restart_button.src = './image/restart.png';
     var restart_button_style = restart_button.style;
     var restart_button_styles = {
       color:'white',
